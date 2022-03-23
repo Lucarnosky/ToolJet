@@ -37,14 +37,7 @@ export class MetadataService {
     });
   }
 
-  async finishInstallation(
-    metadata: any,
-    installedVersion: string,
-    name: string,
-    email: string,
-    org: string,
-    ip_address: string
-  ) {
+  async finishInstallation(metadata: any, installedVersion: string, name: string, email: string, org: string) {
     return await got('https://hub.tooljet.io/subscribe', {
       method: 'post',
       json: {
@@ -53,7 +46,6 @@ export class MetadataService {
         name,
         email,
         org,
-        ip_address,
       },
     });
   }

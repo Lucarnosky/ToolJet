@@ -59,7 +59,7 @@ export class MetadataController {
       }
 
       if (!process.env.DISABLE_TOOLJET_TELEMETRY) {
-        await this.metadataService.sendTelemetryData(metadata, req.ip);
+        await this.metadataService.sendTelemetryData(metadata);
       }
     }
 
